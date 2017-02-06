@@ -1,0 +1,23 @@
+h2{
+   text-align: center;
+    color: #415e8c;
+    font-size: 40px;
+}
+
+label{
+    font-size: 18px;
+    margin-left: 8%;
+}
+
+
+.loginClass
+{
+    border-radius: 1px solid;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    width: 50%;
+    margin: 8px 0;
+    margin-top: 10%;
+    margin-left: 8%;
+}
+   

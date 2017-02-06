@@ -1,0 +1,41 @@
+
+<app-question-header></app-question-header>
+
+<div>
+  <h2>Ask your own question</h2>
+</div>
+
+<div class="form-horizontal qstnClass">
+  <form name="form" (ngSubmit)="f.form.valid && onSubmit(f)" #f="ngForm" novalidate>
+    <div class="form-group" [ngClass]="{ 'has-error':f.submitted && !questionTitle.valid ||f.submitted && !questionDescription.valid}">
+           <div class="form-group col-md-8 ">
+              <input 
+                type="text" 
+                class="form-control" 
+                placeholder="Type your question here."
+                id="questionTitle"
+                name="questionTitle"
+                #questionTitle="ngModel" [(ngModel)]="questionDetails.Title"
+                required
+                >
+                <div *ngIf="f.submitted && !questionTitle.valid" class="help-block">Question Title is required</div>
+          </div>
+         <div class="form-group col-md-8 ">
+             <textarea 
+                rows="5" 
+                class=" form-control"
+                id="questionDescription"
+                name="questionDescription"
+                placeholder="Describe your question here..." 
+                #questionDescription="ngModel" [(ngModel)]="questionDetails. Description"
+                required>
+                </textarea>
+              <div *ngIf="f.submitted && !questionDescription.valid" class="help-block">Description is required</div>
+         </div>
+      <div class="col-sm-offset-1 col-sm-12">
+        <button type="submit" class="btn btn-success " >Post Your Question</button>
+        <button type="reset" class="btn btn-primary " >Clear</button>
+      </div>
+    </div>
+  </form>
+</div>

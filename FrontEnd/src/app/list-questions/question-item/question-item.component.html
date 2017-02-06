@@ -1,0 +1,36 @@
+
+<head>
+  <style>
+    #description{
+      color:#9dba41 ;
+     }
+
+   #userAsked{
+     color:#cc2c59 ;
+    }
+
+   #dateAsked{
+    color:#cc7498 ;
+    }
+
+   #status{
+    color:#a32f40 ;
+    }
+
+    #AnswerCount{
+        color:#e0b970 ;
+    }
+
+  </style>
+</head>
+
+<a [routerLink]="[questionId]" routerLinkActive = "active" class="  list-group-item clearfix">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{question?.Title}}</h4>
+    <p class="list-group-item-text" id="description">{{question?.Description}}</p><br>
+    <p> <span class="list-group-item-text" id="userAsked">{{question?.UserAsked}} ,</span>
+    <span class="list-group-item-text" id="dateAsked">{{question?.DateTimeAsked }} </span><br>
+    <span class="list-group-item-text" id="status">{{Status}}</span> <br/>
+    <span class="list-group-item-text" id="AnswerCount">{{question?.AnswerCount}} Answers</span> </p>
+  </div>
+</a>

@@ -1,0 +1,44 @@
+/* Style for first heading */
+h2{
+    margin-top: 40px;
+    margin-left: 20px;
+    color: #415e8c;
+    padding-bottom: 10px;
+    font-size: 60px;
+}
+
+/* heading for second heading */
+h4{
+    margin-left: 90px;
+    color: #2e4f84;
+    padding-bottom: 40px;
+}
+
+/* style for Register form labels */
+label{
+    font-size: 15px;
+}
+
+/*style for Register and Reset button*/
+.btnClass{ 
+   margin-bottom: 50px;
+   width: 25% !important;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+}
+
+/*style for Register and Reset button*/
+.btnClass button {
+    float: left;
+    display: block;
+    margin-left: auto;
+    margin-right: 25px;
+}
+
+ /* Marker for required fields */
+.required { 
+   color: red;
+   font-size: 20px;
+}

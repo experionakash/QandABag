@@ -1,0 +1,30 @@
+  
+  <h3> Answers </h3>
+  <button class="btn btn-primary" (click)="ShowAnswerFeild()" #answerNow >Answer Now</button>
+  <form name="form" (ngSubmit)="answer.form.valid && onSubmit(answer)"  #answer="ngForm" *ngIf="isShow" novalidate >
+        <div class="form-group" [ngClass]="{ 'has-error':answer.submitted && !questionAnswer.valid}">
+             <div class="form-group col-md-8 ">
+                <textarea 
+                    rows="5" 
+                    class=" form-control"
+                    name="questionAnswer"
+                    id="questionAnswer" 
+                    #questionAnswer="ngModel"  [(ngModel)]="newAnswer.AnswerDetails" 
+                    placeholder="Describe your answer here..." 
+                    required>
+                </textarea>
+                 <div *ngIf="answer.submitted && !questionAnswer.valid" class="help-block">Answer required</div>
+             </div>
+             <div class="col-sm-offset-1 col-sm-12">
+                 <button type="submit" class="btn btn-success">Post Your Answer</button>
+             </div>
+        </div>
+  </form>
+<div class="row">
+  <div class="col-xs-12" id="contact-list">
+    <ul class="list-group">
+      <app-answer-item *ngFor="let item of answers; let i of index" [answer]="item" [index]="i" ></app-answer-item>
+    </ul>
+  </div>
+</div>
+

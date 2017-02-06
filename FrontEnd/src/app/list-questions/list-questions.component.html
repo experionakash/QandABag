@@ -1,0 +1,16 @@
+<app-question-header></app-question-header>
+<div class="container">
+  <div class="col-md-5">
+    <div class="row">
+      <h3> Questions </h3>
+      <div class="col-xs-12" id="contact-list">
+        <ul class="list-group">
+          <app-question-item *ngFor="let item of questions" [question]="item" [questionId]="item.QuestionId" (click)="LoadAnswers()"></app-question-item>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-7">
+    <router-outlet> </router-outlet>
+  </div>
+</div>

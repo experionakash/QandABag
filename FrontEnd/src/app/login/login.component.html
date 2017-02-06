@@ -1,0 +1,41 @@
+
+<app-home></app-home>
+
+<div class="container-fluid col-md-2"> </div>
+
+<div class="container-fluid col-md-8 loginClass">
+<div>
+  <div>
+    <h2>Login</h2>
+  </div>
+  <br>
+  <!--Login Form-->
+  <div class="form-horizontal formStyle">
+  <form name="form" (ngSubmit)="f.form.valid && onSubmit(f)" #f="ngForm" novalidate>
+      <div  class="form-group" [ngClass]="{ 'has-error':f.submitted && !username.valid || f.submitted && !password.valid}">
+        <div class="form-group">
+          <label for="username" class="control-label col-sm-4">UserName</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="username" name="username" #username="ngModel" [(ngModel)]="userLogin.username" required>
+            <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+        </div>
+        </div>
+        <div class="form-group">
+          <label for="password" class="control-label col-sm-4">Password</label>
+          <div class="col-sm-4">
+            <input type="password" class="form-control" id="password" name="password"  #password="ngModel" [(ngModel)]="userLogin.password" required>
+            <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+          </div>
+        </div>
+        <br>
+        <div class="col-sm-offset-4 col-sm-12">
+          <button  type="submit" class="btn btn-primary ">Login</button>
+          <button  type="reset" class="btn btn-success ">Reset</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+
+<div class="container-fluid col-md-2"></div>
