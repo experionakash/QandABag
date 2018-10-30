@@ -1,4 +1,4 @@
-# QABag
+# QABag - A sample begginer project.(Angular 2 and .net)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
